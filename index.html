@@ -19,7 +19,7 @@
 
   header{position:sticky; top:0; z-index:20; background:rgba(11,11,12,0.85); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
   header .wrap{display:flex; align-items:center; gap:10px; padding:12px 20px;}
-  header img.badge{width:32px; height:32px; object-fit:contain;}
+  header img.badge{width:32px; height:32px; object-fit:contain; background:#fff; border-radius:50%; padding:3px;}
   header .word{font-family:'Lora',serif; font-size:15px; letter-spacing:0.06em; color:var(--accent);}
 
   section{padding:56px 0;}
@@ -47,7 +47,13 @@
   .work-heading{font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:var(--muted); border-top:1px solid var(--line); padding-top:26px; margin-top:6px;}
 
   .close{text-align:center; border-top:1px solid var(--line); padding:60px 0;}
-  .close img.badge{width:48px; height:48px; object-fit:contain; margin-bottom:14px;}
+  .close img.badge{width:48px; height:48px; object-fit:contain; margin-bottom:14px; background:#fff; border-radius:50%; padding:4px;}
+
+  .lightbox{position:fixed; inset:0; background:rgba(0,0,0,0.9); display:none; align-items:center; justify-content:center; z-index:100; padding:20px;}
+  .lightbox.open{display:flex;}
+  .lightbox img, .lightbox video{max-width:100%; max-height:90vh; border-radius:10px;}
+  .lightbox .lb-close{position:absolute; top:18px; right:22px; color:#fff; font-size:28px; line-height:1; cursor:pointer; background:rgba(255,255,255,0.1); width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center;}
+  .piece video, .transform video, .transform img{cursor:zoom-in;}
   .close .word{font-family:'Lora',serif; font-size:19px; letter-spacing:0.05em; color:var(--accent); margin-bottom:10px;}
   .close p.tag{font-size:13px; color:var(--muted); max-width:420px; margin:0 auto 26px;}
 
@@ -147,6 +153,46 @@
 </section>
 
 <footer>© 2026 Studio Sheryanto™</footer>
+
+<div class="lightbox" id="lightbox">
+  <div class="lb-close" onclick="closeLightbox()">&#10005;</div>
+  <div id="lightbox-content"></div>
+</div>
+
+<script>
+  function openLightbox(el){
+    var box = document.getElementById('lightbox');
+    var content = document.getElementById('lightbox-content');
+    content.innerHTML = '';
+    if (el.tagName === 'VIDEO') {
+      var v = document.createElement('video');
+      v.src = el.currentSrc || el.src;
+      v.controls = true;
+      v.autoplay = true;
+      v.loop = true;
+      v.playsInline = true;
+      content.appendChild(v);
+    } else {
+      var img = document.createElement('img');
+      img.src = el.currentSrc || el.src;
+      content.appendChild(img);
+    }
+    box.classList.add('open');
+  }
+  function closeLightbox(){
+    var box = document.getElementById('lightbox');
+    box.classList.remove('open');
+    document.getElementById('lightbox-content').innerHTML = '';
+  }
+  document.getElementById('lightbox').addEventListener('click', function(e){
+    if (e.target.id === 'lightbox') closeLightbox();
+  });
+  document.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('.piece video, .transform video, .transform img').forEach(function(el){
+      el.addEventListener('click', function(){ openLightbox(el); });
+    });
+  });
+</script>
 
 </body>
 </html>
