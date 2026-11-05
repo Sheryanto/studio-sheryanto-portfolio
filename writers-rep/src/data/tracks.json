@@ -1,0 +1,30 @@
+[
+  {
+    "id": "journaling",
+    "nameAr": "اليوميات",
+    "nameEn": "Journaling",
+    "descriptionAr": "كتابة حرّة وصادقة لبناء العادة وإيجاد الصوت.",
+    "descriptionEn": "Honest free writing to build the habit and find your voice."
+  },
+  {
+    "id": "creative",
+    "nameAr": "الكتابة الإبداعية",
+    "nameEn": "Creative Writing",
+    "descriptionAr": "الوصف، الشخصيات، التوتر، وبناء قطعة قصيرة مكتملة.",
+    "descriptionEn": "Description, character, tension, and finishing short pieces."
+  },
+  {
+    "id": "screenwriting",
+    "nameAr": "كتابة السيناريو",
+    "nameEn": "Screenwriting",
+    "descriptionAr": "الكتابة بالصورة: سطور الحدث، الحوار، والنص الضمني.",
+    "descriptionEn": "Writing in images: action lines, dialogue, and subtext."
+  },
+  {
+    "id": "professional",
+    "nameAr": "الكتابة المهنية",
+    "nameEn": "Professional Writing",
+    "descriptionAr": "الوضوح والإيجاز: الملخصات، الرسائل، والموجزات الإبداعية.",
+    "descriptionEn": "Clarity and brevity: summaries, emails, and creative briefs."
+  }
+]

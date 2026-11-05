@@ -1,0 +1,34 @@
+{
+  "id": "foundations-month-1",
+  "version": 1,
+  "weeks": [
+    {
+      "titleAr": "الأسبوع ١: نقطة البداية",
+      "titleEn": "Week 1: Baseline",
+      "focusAr": "الكتابة الحرة، وصف المشهد، الحوار",
+      "focusEn": "Freewriting, scene description, dialogue",
+      "exerciseIds": ["j-freewrite-01", "c-scene-01", "s-dialogue-01", "p-explain-01", "j-why-01"]
+    },
+    {
+      "titleAr": "الأسبوع ٢: الملاحظة والوضوح",
+      "titleEn": "Week 2: Observation & clarity",
+      "focusAr": "الملاحظة، الوصف، الوضوح",
+      "focusEn": "Observation, description, clarity",
+      "exerciseIds": ["c-observe-01", "j-senses-01", "p-simplify-01", "s-action-01", "c-object-01"]
+    },
+    {
+      "titleAr": "الأسبوع ٣: الشخصية والصراع",
+      "titleEn": "Week 3: Character & conflict",
+      "focusAr": "الشخصية، الصراع، التوتر",
+      "focusEn": "Character, conflict, tension",
+      "exerciseIds": ["c-character-01", "s-conflict-01", "j-otherside-01", "c-tension-01", "s-subtext-01"]
+    },
+    {
+      "titleAr": "الأسبوع ٤: قطعة مكتملة",
+      "titleEn": "Week 4: A finished piece",
+      "focusAr": "قطعة قصيرة مكتملة ومراجعتها",
+      "focusEn": "A finished short piece and its revision",
+      "exerciseIds": ["c-short-plan-01", "c-short-draft-01", "c-short-draft-02", "c-revision-01", "p-pitch-01"]
+    }
+  ]
+}
